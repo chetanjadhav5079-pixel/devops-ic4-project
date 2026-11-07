@@ -13,5 +13,12 @@ def home():
 def health():
     return jsonify({"status": "UP"}), 200
 
+@app.route("/version")
+def version():
+    return jsonify({
+        "version": "1.0",
+        "project": "DevOps IC4"
+    })
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
